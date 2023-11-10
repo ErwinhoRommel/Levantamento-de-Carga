@@ -56,24 +56,22 @@ def dados(largura, comprimento):
             print('1 ponto de 100 VA')
         else:
             if A % 4 == 0:
-                ilum = (A/4) + 1
-                Poti = (A/4)*60 + 100
+                ilum = ((A-6)/4) + 1
+                Poti = ((A-6)/4)*60 + 100
                 print(ilum,'pontos de',Poti,'VA')
             else:
-                ilum = int((A/4) + 1)
-                Poti = int((A/4)*60 + 100)
+                ilum = math.floor(((A-6)/4) + 1)
+                Poti = math.floor(((A-6)/4))*60 + 100
                 print(ilum,'pontos de',Poti,'VA')
 
 
 
 
 if __name__ == '__main__': 
-  while prog == True:
+  while True:
     print('levantamento de carga\n')
     largura = float(input('entre com o valor da largura: '))
     comprimento = float(input('entre com o valor do comprimento: '))
     dados(largura, comprimento)
-    a = input('o usuario deseja continuar a usar o programa se não tecle q se sim tecle qualquer outra tecla:')
-    if  a == 'q':
-        prog = False
+    
     
